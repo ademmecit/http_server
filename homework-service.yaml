@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: homework
+spec:
+  selector:
+    app: homework
+  ports:
+  - nodePort: 32500
+    port: 8081
+    protocol: TCP
+    targetPort: 80
+  type: LoadBalancer
